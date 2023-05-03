@@ -3,7 +3,6 @@ package pl.pomoku.pomokupluginsrepository.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.PluginIdentifiableCommand;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -11,10 +10,10 @@ import java.util.Objects;
 
 import static pl.pomoku.pomokupluginsrepository.text.Text.strToComp;
 
-public abstract class EzCommand implements CommandExecutor {
+public abstract class EasyCommand implements CommandExecutor {
     private final CommandInfo commandInfo;
 
-    public EzCommand() {
+    public EasyCommand() {
         commandInfo = getClass().getDeclaredAnnotation(CommandInfo.class);
         Objects.requireNonNull(commandInfo, "Komenda wymaga adnotacji CommandInfo");
     }
